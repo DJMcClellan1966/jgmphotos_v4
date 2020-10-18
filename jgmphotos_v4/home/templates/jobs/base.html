@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="description" content="jgmphotography homepage">
+    <meta name="keywords" content="photography, gallery, art, blog">
+    <meta name="robots" content="follow">
+    <meta http-equiv="author" content="Douglas McClellan">
+    <meta http-equiv="expires" content="">
+    <title>jgmphotography home</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>JGMPhotography</h1>
+  <nav>
+    <ul>
+      <li><a href="{% url 'gallery' %}">Gallery</a></li>
+      <li><a href="https://www.facebook.com/Jennifer-Golden-McClellan-Photography-101556664725140/">Facebook</a></li>
+      <li><a href="mailto:jennifer.mcclellan@jgmphotography.net">Contact</a></li>
+    </ul>
+  </nav>
+  </header>
+    <div id="content">
+    {% block content %}
+    {% endblock %}
+    </div>
+    <footer>
+       <ul>
+         <li><a href="#">Back to top</li></a>
+         <li>Album is &copy;<a href="mailto:jennifer.mcclellan@jgmphotography.net">Jennifer McClellan {% now "Y" %}.</a></li>
+         <li>Read <a href="{% url 'privacy' %}">privacy policy</a></li>
+         <li>Read <a href="{% url 'terms' %}">terms of service</a></li>
+       </ul>
+    </footer>
+  </div><!-- .wrapper -->
+
+  </body>
+</html>

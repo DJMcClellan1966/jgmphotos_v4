@@ -1,0 +1,11 @@
+{% extends 'jobs/base.html' %}
+
+
+{% block content %}
+  {% for image in object_list %}
+
+                <img src="{{ image.image.url}}" class="img-thumbnail">
+
+            
+  {% endfor %}
+{% endblock %}
