@@ -2,10 +2,16 @@
 
 
 {% block content %}
+<h3>click image to zoom in.</h3><h3>Use back arrow to return to gallery</h3>
+  {% load thumbnail %}
   {% for image in object_list %}
 
-                <img src="{{ image.image.url}}" class="img-thumbnail">
+    <a href="{{ image.image.url }}" >
+      <img src="{% thumbnail image.image 0x200 %}" class="image-detail">
+    </a>
 
-            
+
+
+
   {% endfor %}
 {% endblock %}
